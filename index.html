@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pacman</title>
+  <link rel="icon" href="images/ghost.png" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <!-- <script src="library/p5.js" type="text/javascript"></script>
+  <script src="library/addons/p5.dom.js" type="text/javascript"></script>
+  <script src="library/addons/p5.sound.js" type="text/javascript"></script>
+  <script src="GameObject.js" type="text/javascript"></script>
+  <!-- <script src="sketch.js" type="text/javascript"></script> ->
+  <script src="roca.js" type="text/javascript"></script>
+  <script src="maze.js" type="text/javascript"></script>
+  <script src="food.js" type="text/javascript"></script>
+  <script src="grapes.js" type="text/javascript"></script>
+  <script src="pacman.js" type="text/javascript"></script> -->
+
+
+  <header> <h1> Pacman Game by Eduardo</h1> </header>
+  <img src="./images/splash-image.jpg" alt="Splash image of Pacman" />
+  <nav class="topnav">
+              <a href="/">Settings</a>
+              <a href="linkref.html" id="startGame" >Start Game</a>
+              <a href="linkref.html">Credits</a>
+              <a href="linkref.html">Help</a>
+          <!-- /*    <button id="btnStartGame">Start Game </button>
+
+               <input type="button" class="topnav" onclick="alert('Hello World!')" value="Click Me!">
+              <a href="">Credits</a>-->
+  </nav>
+  <script type="text/javascript">
+
+  var myLink = document.getElementById('startGame');
+
+  myLink.onclick = function(){
+
+      // var btn = document.getElementById('btnStartGame');
+      // btn.disabled = true;
+
+    // document.getElementById("btnStartGame").disabled = true;
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "library/p5.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+      console.log(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "library/addons/p5.dom.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "library/addons/p5.sound.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "GameObject.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "sketch.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "roca.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "maze.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "food.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "grapes.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "pacman.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+      return false;
+  }
+  </script>
+  <div id = "p5sketch">
+     <!-- p5 instance will be created here -->
+   </div>
+
+</body>
+
+</html>
