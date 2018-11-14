@@ -55,47 +55,9 @@ function Pacman( x,y)
     this.direction = 0;
   //Update the x Position
     this.x = this.x + IMAGE_SIZE;
-    //Mirem si ens podem mous
-    // var finalX= this.x + IMAGE_SIZE;
-    // var trobat= false;
-    // for (var i = 0; i < arrayRocasMapa.length; i++) {
-    //       console.log("Compruebo la roca en posicion:" + i);
-    //       if (arrayRocasMapa[i].x === finalX)
-    //       {
-    //         alert("Cant move in right direction");
-    //         trobat=true;
-    //         break;
-    //       }
-    //     }
-    // if ( trobat == false)
-    // {
-    //   thix.x = this.x+IMAGE_SIZE;
-    // }
+   
   };
 
-  this.moveLeft = function(){
-
-  //Update the direction
-    this.direction = 2;
-    this.x = this.x - 32;
-
-  };
-
-  this.moveUp = function(){
-
-  //Update the direction
-    this.direction = 3;
-    this.y = this.y - IMAGE_SIZE;
-
-  };
-
-  this.moveDown = function(){
-
-  //Update the direction
-    this.direction = 1;
-    this.y = this.y + IMAGE_SIZE;
-
-  };
 
   this.eatFood = function( comida){
 
@@ -116,38 +78,14 @@ function Pacman( x,y)
   this.eatGrapes = function( grape){
 
   var distanceGrapePacman = dist( this.x, this.y, grape.x, grape.y);
-    if ( distanceGrapePacman < 16)
-        {
-          this.score = this.score + 4; //Update the scores
-          return true;
-
-        }
-    else //Distance is largerthan
-    {
-      return false;
-    }
+    
 
   };
 
   this.eatRock = function( rock){
 
   var distanceRockPacman = dist( this.x, this.y, rock.coordX, rock.coordY);
-    if ( distanceRockPacman < 16)
-        {
-          this.lives = this.lives - 1; //Update the scores
-          alert("One live less");
-          //Corregir posicio pacman
-          if ( this.direction == 0) this.x=this.x-32;
-          else if ( this.direction == 1) this.y=this.y-32;
-          else if ( this.direction == 2) this.x=this.x+32;
-          else if ( this.direction == 3) this.y=this.y+32;
-          return true;
-
-        }
-    else //Distance is largerthan
-    {
-      return false;
-    }
+   
 
   };
 }
